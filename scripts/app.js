@@ -18,10 +18,15 @@ myBtn.addEventListener('click', function () {
     myBtn.style.borderRadius = `${bRadius}px`
 
     // modification du body.style.backgroundColor
-    if (bColor === "red") {
-        bColor = "green"
-    } else {
-        bColor = "red"
-    }
-    myBody.style.backgroundColor = bColor
+
+    // if (bColor === "red") {
+    //     bColor = "green"
+    // } else {
+    //     bColor = "red"
+    // }
+
+    count++
+    const index = count % colors.length
+
+    myBody.style.backgroundColor = colors[index]
 })
