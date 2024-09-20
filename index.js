@@ -157,4 +157,21 @@ for (let i = 0; i < people.length; i++) {
 
 str += "sont de la même famille."
 
-console.log(str)
+// console.log(str)
+
+const numbers2 = [11, 13, 42, 32, 45, 31]
+
+// 1. calculer la somme totale du tableau à l'aide d'une boucle for
+let total = 0
+let oddCount = 0
+for (let i = 0; i < numbers2.length; i++) {
+    // calcul de la moyenne des nombres impairs
+    if (numbers2[i] % 2 === 1) {
+        total += numbers2[i]
+        oddCount++
+    }
+}
+// 2. calculer la moyenne du tableau à l'aide de la somme précédente
+// const avg = total / numbers2.length
+const oddAvg = total / oddCount
+console.log(total, oddAvg)
