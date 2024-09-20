@@ -108,12 +108,53 @@ myIdentity.town.districts.push('Gradignan')
 
 // A l'aide de l'objet myIdentity, construire la phrase "Bonjour, je m'appelle Pierre Doazan, j'ai 36 ans, et j'habite à Talence"
 const sentence = `Bonjour, je m'appelle ${myIdentity.firstname[1]} ${myIdentity.lastname}, j'ai ${myIdentity.age} ans, et j'habite à ${myIdentity.town.districts[2]}.`
-console.log(sentence)
+// console.log(sentence)
 
 // A l'aide de l'objet myIdentity, construire la phrase "Je suis un.e habitant.e de Bordeaux."
+// if (myIdentity.gender === "male") {
+//     console.log(`Je suis un habitant de ${myIdentity.town.name}.`)
+// } else {
+//     console.log(`Je suis une habitante de ${myIdentity.town.name}.`)
+// }
 
-if () {
-    console.log("Je suis un habitant de Bordeaux.")
-} else {
-    console.log("Je suis une habitante de Bordeaux.")
+
+// BOUCLE FOR, FOR LOOP
+// for (let i = 10; i > 0; i--) {
+//     console.log(`passage de boucle n°${i}`)
+// }
+
+const numbers = [2, 5, 21, 13, 3]
+
+// Afficher dans la console pour chacun des éléments du tableau "l'élément vaut : ", à l'aide d'une boucle for
+
+for (let i = 0; i < numbers.length; i++) {
+    // console.log(`l'élément n°${i} vaut : ${numbers[i]}`)
 }
+
+// console.log("On est sorti de la boucle for")
+
+// A l'aide d'une boucle for, calculer la somme des éléments du tableau numbers
+let sum = 0
+for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i]
+}
+
+const people = ["Simon", "Stéphane", "Mathilde", "Marianne", "Margot"]
+
+// Ecrire à l'aide de la boucle for la phrase "Simon, Stéphane, Mathilde, Marianne et Margot sont de la même famille.", 
+
+let str = ""
+
+for (let i = 0; i < people.length; i++) {
+    if (i === people.length - 2) {
+        str += people[people.length - 2] + " et "
+    } else if (i === people.length - 1) {
+        str += people[people.length - 1] + " "
+    } else {
+        str += people[i] + ", "
+    }
+}
+
+str += "sont de la même famille."
+
+console.log(str)
