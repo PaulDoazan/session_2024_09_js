@@ -1,4 +1,17 @@
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #f2d4b5;
-    color: blue;
+    height: 100vh;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    background-color: grey;
+    border-radius: 10px;
 }
