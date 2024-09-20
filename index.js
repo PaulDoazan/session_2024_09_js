@@ -86,12 +86,34 @@ const myIdentity = {
         name: "Bordeaux",
         population: 300000,
         districts: ["Pessac", "Merignac", "Talence"]
-    }
+    },
+    gender: "male"
+}
+
+const myIdentity2 = {
+    firstname: ["Margot", "Mathilde"],
+    lastname: 'Durand',
+    age: 36,
+    town: {
+        name: "Bordeaux",
+        population: 300000,
+        districts: ["Pessac", "Merignac", "Talence"]
+    },
+    gender: "female"
 }
 
 myIdentity.town.districts.push('Gradignan')
 
 // console.log(myIdentity.town.districts[myIdentity.town.districts.length - 1])
 
-// A l'aide de l'objet myIdentity, construire la phrase "Bonjour, je m'appelle Paul Doazan, j'ai 36 ans, et j'habite à Talence".
-console.log(myIdentity.firstname)
+// A l'aide de l'objet myIdentity, construire la phrase "Bonjour, je m'appelle Pierre Doazan, j'ai 36 ans, et j'habite à Talence"
+const sentence = `Bonjour, je m'appelle ${myIdentity.firstname[1]} ${myIdentity.lastname}, j'ai ${myIdentity.age} ans, et j'habite à ${myIdentity.town.districts[2]}.`
+console.log(sentence)
+
+// A l'aide de l'objet myIdentity, construire la phrase "Je suis un.e habitant.e de Bordeaux."
+
+if () {
+    console.log("Je suis un habitant de Bordeaux.")
+} else {
+    console.log("Je suis une habitante de Bordeaux.")
+}
