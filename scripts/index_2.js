@@ -15,7 +15,7 @@ for (let i = 0; i < arr1.length; i++) {
     }
 }
 
-console.log(sum1)
+// console.log(sum1)
 
 let sum2 = 0
 for (let i = 0; i < arr2.length; i++) {
@@ -24,7 +24,7 @@ for (let i = 0; i < arr2.length; i++) {
     }
 }
 
-console.log(sum2)
+// console.log(sum2)
 
 let sum3 = 0
 for (let i = 0; i < arr3.length; i++) {
@@ -33,7 +33,25 @@ for (let i = 0; i < arr3.length; i++) {
     }
 }
 
-console.log(sum3)
+
+// écrire la fonction qui prend en paramètre un tableau et qui retourne la somme des nombres pairs de ce tableau
+function calculSum(arrParam, moduloParam) {
+    let sum = 0
+    for (let i = 0; i < arrParam.length; i++) {
+        if (arrParam[i] % 2 === moduloParam) {
+            sum += arrParam[i];
+        }
+    }
+    return sum
+}
+
+const res1 = calculSum(arr1, 0)
+const res2 = calculSum(arr2, 1)
+const res3 = calculSum(arr3, 1)
+
+console.log(res1, res2, res3)
+
+
 
 function addTen(firstParameter) {
     const result = firstParameter + 10
@@ -58,13 +76,24 @@ console.log(finalResult)
 
 // Ecrire une fonction qui prend un nom (string) en paramètre et qui retourne une chaine de caractère "Bienvenue {param} !" 
 
-const name1 = "Antoine"
-const name2 = "Manon"
+let name1 = "Antoine"
+let name2 = "Manon"
 
-// function () {
+const w1 = welcome(name1)
+const w2 = welcome(name2)
 
-// }
+function welcome(param) {
+    return `Bienvenue ${param} !`
+}
 
-// execute
 
-// console.log()
+// écrire une fonction qui prend en paramètre un tableau de nombres et qui retourne un tableau des nombres pairs
+
+const nbs = [12, 23, 14, 43, 5, 6, 2, 8, 90, 102, 31]
+
+function sortNumbers() {
+
+}
+
+const evenNbs = sortNumbers(nbs)
+console.log(evenNbs)
