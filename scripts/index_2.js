@@ -145,6 +145,29 @@ function average(arrNbs) {
     return Math.round((sum / arrNbs.length) * 100) / 100
 }
 
-console.log(average(nbs))
+function getNumbersAboveAvg(arr) {
+    const avg = average(arr)
 
+    let res = []
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > avg) {
+            res.push(arr[i])
+        }
+    }
+
+    return res
+}
+
+// function récursive, pas nécessaire à ce stade
+function addNb(nb) {
+    let newNb = nb + 5
+    if (newNb > 50) {
+        return newNb
+    }
+    addNb(newNb)
+}
+
+addNb(4)
+
+console.log(getNumbersAboveAvg(nbs))
 // difficulté supplémentaire : la fonction retourne un tableau des nombres supérieurs à la moyenne du tableau en paramètre
