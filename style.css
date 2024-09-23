@@ -1,5 +1,6 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #f2d4b5;
@@ -14,4 +15,9 @@ body {
     height: 50px;
     background-color: grey;
     border-radius: 10px;
+}
+
+.title {
+    color: green;
+    margin-bottom: 50px;
 }

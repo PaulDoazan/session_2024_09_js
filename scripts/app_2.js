@@ -5,11 +5,13 @@ const body = document.querySelector('body')
 btnDiv.addEventListener('click', randomColor)
 
 function randomColor() {
-    const red = 213
-    const green = 123
-    const blue = 90
+    const red = Math.random() * 255
+    const green = Math.random() * 255
+    const blue = Math.random() * 255
 
-    body.style.backgroundColor = "rgb( ,  , )"
+    // color
+
+    body.style.backgroundColor = `rgb(${red},${green},${blue})`
 }
 
 // 2ème étape, on déclare un click sur le bouton
