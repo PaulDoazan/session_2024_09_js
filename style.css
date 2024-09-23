@@ -1,4 +1,5 @@
 body {
+    font-family: "Tiny5";
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,5 +20,6 @@ body {
 
 .title {
     color: green;
+    font-size: 20px;
     margin-bottom: 50px;
 }
