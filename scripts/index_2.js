@@ -55,3 +55,5 @@ const removedNb = substractFive(nb1)
 const finalResult = multiplyByTwo(removedNb)
 
 console.log(finalResult)
+
+// Ecrire une fonction qui prend un nom (string) en paramètre et qui retourne une chaine de caractère "Bienvenue {param} !" 
