@@ -11,7 +11,9 @@ const colors = ["rgb(255, 203, 203)", "#ffb5b5", "#407088", "#132743"]
 const myRandomNb = Math.random()
 console.log(myRandomNb)
 
-myBtn.addEventListener('click', function () {
+myBtn.addEventListener('click', updateLayout)
+
+function updateLayout() {
     // on alterne entre borderRadius à 10 et 20
     if (bRadius === 10) {
         bRadius = 20
@@ -31,4 +33,4 @@ myBtn.addEventListener('click', function () {
     count++
     const index = count % colors.length
     myBody.style.backgroundColor = colors[index]
-})
+}
