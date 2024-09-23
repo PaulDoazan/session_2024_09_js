@@ -103,4 +103,17 @@ function sortNumbers(arrParam) {
 
 const evenNbs = sortNumbers(nbs)
 // const oddNbs = sortNumbers(nbs)
-console.log(evenNbs)
+// console.log(evenNbs)
+
+
+const people = [
+    { name: "Simon", gender: "male" },
+    { name: "Stéphane", gender: "male" },
+    { name: "Paul", gender: "male" },
+    { name: "Mathilde", gender: "female" },
+    { name: "Marianne", gender: "female" },
+    { name: "Marion", gender: "female" },
+    { name: "Louis", gender: "male" },
+]
+
+// écrire une fonction qui prend en paramètre un tableau d'objet et un genre, et qui retourne un nouveau tableau, onlyWomen, onlyMen
