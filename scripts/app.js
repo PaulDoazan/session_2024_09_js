@@ -27,6 +27,5 @@ myBtn.addEventListener('click', function () {
 
     count++
     const index = count % colors.length
-
     myBody.style.backgroundColor = colors[index]
 })
