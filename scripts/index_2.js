@@ -117,3 +117,34 @@ const people = [
 ]
 
 // écrire une fonction qui prend en paramètre un tableau d'objet et un genre, et qui retourne un nouveau tableau, onlyWomen, onlyMen
+
+function filterByGender(arr, genderStr) {
+    const arrResult = []
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].gender === genderStr) {
+            arrResult.push(arr[i].name)
+        }
+    }
+    return arrResult
+}
+
+const women = filterByGender(people, "female")
+const men = filterByGender(people, "male")
+console.log(men);
+
+
+// écrire une fonction qui prend un tableau de nombre (nbs) en paramètre et qui me retourne la moyenne du tableau
+
+function average(arrNbs) {
+    let sum = 0
+
+    for (let i = 0; i < arrNbs.length; i++) {
+        sum += arrNbs[i];
+    }
+
+    return Math.round((sum / arrNbs.length) * 100) / 100
+}
+
+console.log(average(nbs))
+
+// difficulté supplémentaire : la fonction retourne un tableau des nombres supérieurs à la moyenne du tableau en paramètre
