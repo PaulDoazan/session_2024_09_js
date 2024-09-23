@@ -3,6 +3,8 @@ const btnDiv = document.querySelector('.button')
 const titleDiv = document.querySelector('.title')
 const body = document.querySelector('body')
 
+let customSize = 20;
+
 // 2ème étape, on déclare un click sur le bouton
 btnDiv.addEventListener('click', randomColor)
 
@@ -12,6 +14,8 @@ function randomColor() {
     const green = Math.random() * 255
     const blue = Math.random() * 255
 
+    customSize++
+    titleDiv.style.fontSize = `${customSize}px`
     titleDiv.style.color = `rgb(${255 - red},${255 - green},${255 - blue})`
     body.style.backgroundColor = `rgb(${red},${green},${blue})`
 }
