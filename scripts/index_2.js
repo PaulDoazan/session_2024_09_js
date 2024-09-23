@@ -91,9 +91,16 @@ function welcome(param) {
 
 const nbs = [12, 23, 14, 43, 5, 6, 2, 8, 90, 102, 31]
 
-function sortNumbers() {
-
+function sortNumbers(arrParam) {
+    const arrResult = []
+    for (let i = 0; i < arrParam.length; i++) {
+        if (arrParam[i] % 2 === 0) {
+            arrResult.push(arrParam[i])
+        }
+    }
+    return arrResult
 }
 
 const evenNbs = sortNumbers(nbs)
+// const oddNbs = sortNumbers(nbs)
 console.log(evenNbs)
