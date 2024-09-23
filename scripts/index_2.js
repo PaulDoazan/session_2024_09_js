@@ -57,3 +57,14 @@ const finalResult = multiplyByTwo(removedNb)
 console.log(finalResult)
 
 // Ecrire une fonction qui prend un nom (string) en paramètre et qui retourne une chaine de caractère "Bienvenue {param} !" 
+
+const name1 = "Antoine"
+const name2 = "Manon"
+
+// function () {
+
+// }
+
+// execute
+
+// console.log()
