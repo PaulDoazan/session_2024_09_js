@@ -217,3 +217,11 @@ const pizzas = [
         baseTomate: true
     }
 ]
+
+// 1. écrire une fonction qui prend en parametre un tableau, cette fonction retourne tous les .name des elements du tableau dans un tableau names[]
+
+// 2. Ecrire une fonction qui prend en parametre le tableau pizzas et qui retourne le prix moyen des pizzas
+
+// 3. Ecrire une fonction qui prend en parametre un nom de pizza et qui retourne un tableau des ingredients de cette pizza
+
+// 4. Ecrire une fonction qui prend en parametre un ingredient et un tableau de pizzas, la fonction retourne un tableau des noms des pizzas qui ont cet ingredient
