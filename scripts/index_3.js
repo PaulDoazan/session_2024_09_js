@@ -133,3 +133,33 @@ function getSentenceFromUnder40(arr) {
 }
 
 console.log(getSentenceFromUnder40(habitants))
+
+// ecrire une fonction qui prend en paramètre le tableau habitants et qui retourne un tableau des habitants qui habitent Bordeaux ET qui ont moins de 40 ans
+
+console.log(getBxOrUnder40(habitants))
+
+// opérateur AND => &&
+function getParisiansUnder40(arr) {
+    let result = []
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].town === "Paris" && arr[i].age < 40 && arr[i].name === "Marianne") {
+            result.push(arr[i])
+        }
+    }
+
+    return result
+}
+
+// opérateur OR => ||
+function getBxOrUnder40(arr) {
+    let result = []
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].town === "Bordeaux" || arr[i].age < 40 || arr[i].name === "Simon") {
+            result.push(arr[i])
+        }
+    }
+
+    return result
+}
