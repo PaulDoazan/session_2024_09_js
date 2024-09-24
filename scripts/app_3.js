@@ -1,20 +1,25 @@
 const myTitle = document.querySelector('.title')
-const btn = document.querySelector('.button')
+const btn = document.querySelector('.add')
+const btnRefresh = document.querySelector('.refresh')
 const bgContainer = document.querySelector(".background-container")
 
 btn.addEventListener('click', onBtnClick)
+btn.addEventListener('click', addNewElement)
 
-// méthode createElement pour créer une nouvelle balise html
-const newDiv = document.createElement("div");
+function addNewElement() {
+    // méthode createElement pour créer une nouvelle balise html
+    const newDiv = document.createElement("div");
 
-// on met à jour la propriété textContent de la nouvelle balise
-newDiv.textContent = "Ma nouvelle div"
+    // on met à jour la propriété textContent de la nouvelle balise
+    newDiv.textContent = "Ma nouvelle div"
 
-// on ajoute une classe css à la nouvelle balise, les différentes propriétés css de cette classe seront donc appliquées
-newDiv.classList.add('stripe')
+    // on ajoute une classe css à la nouvelle balise, les différentes propriétés css de cette classe seront donc appliquées
+    newDiv.classList.add('stripe')
 
-// on insère la nouvelle balise dans la balise bgContainer
-bgContainer.appendChild(newDiv)
+    // on insère la nouvelle balise dans la balise bgContainer
+    bgContainer.appendChild(newDiv)
+}
+
 
 // regrouper la création d'une div dans une fonction et exécuter cette fonction à chaque click sur le bouton
 
@@ -28,5 +33,4 @@ function onBtnClick() {
     } else {
         myTitle.textContent = "Au revoir !"
     }
-
 }
