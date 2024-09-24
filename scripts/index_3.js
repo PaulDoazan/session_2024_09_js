@@ -219,9 +219,51 @@ const pizzas = [
 ]
 
 // 1. écrire une fonction qui prend en parametre un tableau, cette fonction retourne tous les .name des elements du tableau dans un tableau names[]
+// console.log(getPizzasNames(pizzas))
+
+function getPizzasNames(arr) {
+    let names = []
+
+    for (let i = 0; i < arr.length; i++) {
+        names.push(arr[i].name);
+    }
+
+    return names
+}
 
 // 2. Ecrire une fonction qui prend en parametre le tableau pizzas et qui retourne le prix moyen des pizzas
 
+console.log(getAveragePrice(pizzas))
+function getAveragePrice(arr) {
+    let totalPrice = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        totalPrice += arr[i].price;
+    }
+
+    let avg = totalPrice / arr.length
+
+    // méthode équivalente au Math.round()
+    return avg.toFixed(2)
+}
+
 // 3. Ecrire une fonction qui prend en parametre un nom de pizza et qui retourne un tableau des ingredients de cette pizza
+console.log(getPizzaByName("Montagnarde"))
+
+// BREAK permet de mettre à fin à une boucle for
+function getPizzaByName(pizzaName) {
+    let result
+    for (let i = 0; i < pizzas.length; i++) {
+        if (pizzas[i].name === pizzaName) {
+            result = pizzas[i].ingredients
+            break
+        }
+    }
+
+    result.push('poivrons')
+    return result
+}
 
 // 4. Ecrire une fonction qui prend en parametre un ingredient et un tableau de pizzas, la fonction retourne un tableau des noms des pizzas qui ont cet ingredient
+
+// 5. Ecrire une fonction qui prend en parametre un tableau de pizzas et qui retourne un tableau de tous les ingredients, en evitant les elements dupliques
