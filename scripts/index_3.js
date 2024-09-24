@@ -14,7 +14,7 @@ function sayHello(name) {
 
 // écrire la fonction qui prend en paramètre un tableau et retourne la moyenne des éléments du tableau
 const nbs = [21, 23, 24, 26, 83, 81, 1, 4, 7, 13]
-console.log(average(nbs))
+// console.log(average(nbs))
 
 function average(arr) {
     let sum = 0
@@ -64,9 +64,8 @@ const habitants = [
 ]
 
 // Ecrire une fonction qui prends [habitants] en 1er paramètre et une ville en second paramètre, et qui retourne un tableau des noms des habitants de cette ville
-
 const res = getAverageAgeByTown(habitants, 'Bordeaux')
-console.log(res)
+// console.log(res)
 
 function getHabitantsByTown(arr, town) {
     const filtered = []
@@ -87,3 +86,33 @@ function getAverageAgeByTown(arr, town) {
 
     return average(filteredAge)
 }
+
+// Ecrire une fonction qui me retourne le nombre d'habitants qui ont moins de 40 ans
+function under40(arr) {
+    let count = 0
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].age < 40) {
+            count++
+        }
+    }
+
+    return count
+}
+
+// console.log(under40(habitants))
+
+// Ecrire une fonction qui prend en paramètre habitants et qui retourne la phrase "Paul, Pierre et ... ont moins de 40 ans"
+function getSentenceFromUnder40(arr) {
+    let arrUnder40 = []
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].age < 40) {
+            arrUnder40.push(arr[i].name)
+        }
+    }
+
+    console.log(arrUnder40)
+}
+
+console.log(getSentenceFromUnder40(habitants))

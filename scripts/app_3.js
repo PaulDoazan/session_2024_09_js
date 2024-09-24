@@ -4,11 +4,25 @@ const btnRefresh = document.querySelector('.refresh')
 const bgContainer = document.querySelector(".background-container")
 
 btn.addEventListener('click', onBtnClick)
-btn.addEventListener('click', addNewElement)
+btn.addEventListener('click', addAllElements)
+
+btnRefresh.addEventListener('click', onRefreshClick)
 
 let addedElements = []
 let lastRowCreated
 let count = 0
+
+function onRefreshClick() {
+    count = 0
+    bgContainer.textContent = ''
+}
+
+function addAllElements() {
+    onRefreshClick()
+    for (let i = 0; i < 16; i++) {
+        addNewElement()
+    }
+}
 
 function addNewElement() {
     if (count === 0) {
@@ -22,6 +36,8 @@ function addNewElement() {
     // la propriété innerWidth donne la largeur de la fenêtre en pixels
     // console.log(window.innerWidth)
     // méthode createElement pour créer une nouvelle balise html
+
+    // newDiv === une case
     const newDiv = document.createElement("div");
     addedElements.push(newDiv)
 
@@ -41,7 +57,7 @@ function addNewElement() {
     lastRowCreated.appendChild(newDiv)
 
     count++
-    if (count === 10) count = 0
+    if (count === 4) count = 0
 }
 
 
