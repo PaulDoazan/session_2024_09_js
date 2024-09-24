@@ -6,9 +6,7 @@ sentence2 += ' !!!'
 
 // Après un return, le code n'est pas exécuté
 function sayHello(name) {
-    if (name === "Paul") {
-        return ''
-    }
+    if (name === "Paul") return ''
 
     return `Hello and welcome ${name}`
 }
@@ -66,3 +64,26 @@ const habitants = [
 ]
 
 // Ecrire une fonction qui prends [habitants] en 1er paramètre et une ville en second paramètre, et qui retourne un tableau des noms des habitants de cette ville
+
+const res = getAverageAgeByTown(habitants, 'Bordeaux')
+console.log(res)
+
+function getHabitantsByTown(arr, town) {
+    const filtered = []
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].town === town) filtered.push(arr[i].name)
+    }
+
+    return filtered
+}
+
+function getAverageAgeByTown(arr, town) {
+    const filteredAge = []
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].town === town) filteredAge.push(arr[i].age)
+    }
+
+    return average(filteredAge)
+}
