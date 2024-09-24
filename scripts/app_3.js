@@ -3,7 +3,7 @@ const btn = document.querySelector('.add')
 const btnRefresh = document.querySelector('.refresh')
 const bgContainer = document.querySelector(".background-container")
 
-btn.addEventListener('click', onBtnClick)
+// btn.addEventListener('click', onBtnClick)
 btn.addEventListener('click', addAllElements)
 
 btnRefresh.addEventListener('click', onRefreshClick)
@@ -39,6 +39,9 @@ function addNewElement() {
 
     // newDiv === une case
     const newDiv = document.createElement("div");
+    newDiv.addEventListener('click', function (event) {
+        console.log(event.currentTarget.style.backgroundColor)
+    })
     addedElements.push(newDiv)
 
     // on met à jour la propriété textContent de la nouvelle balise

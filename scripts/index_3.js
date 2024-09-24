@@ -112,7 +112,24 @@ function getSentenceFromUnder40(arr) {
         }
     }
 
-    console.log(arrUnder40)
+    let sentence = ''
+
+    for (let i = 0; i < arrUnder40.length; i++) {
+        // on teste si l'indice est sur la dernière itération de la boucle
+        if (i === arrUnder40.length - 1) {
+            sentence += arrUnder40[i] + ' '
+
+            // on teste si l'indice est sur l'avant-dernière itération de la boucle
+        } else if (i === arrUnder40.length - 2) {
+            sentence += arrUnder40[i] + ' et '
+
+            // on exécute cette ligne pour tous les autres cas
+        } else {
+            sentence += arrUnder40[i] + ', '
+        }
+    }
+
+    return sentence + 'ont moins de 40 ans'
 }
 
 console.log(getSentenceFromUnder40(habitants))
