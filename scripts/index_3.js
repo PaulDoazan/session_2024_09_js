@@ -288,7 +288,11 @@ function getAllIngredients(arr) {
 
     for (let i = 0; i < arr.length; i++) {
         // une deuxième boucle for imbriquée pour parcourir les ingrédients de chaque pizza
-        result.push(arr[i].ingredients)
+        for (let j = 0; j < arr[i].ingredients.length; j++) {
+            if (!result.includes(arr[i].ingredients[j])) {
+                result.push(arr[i].ingredients[j])
+            }
+        }
     }
 
     return result
