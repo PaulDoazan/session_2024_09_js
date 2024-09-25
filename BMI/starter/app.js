@@ -12,6 +12,7 @@ const BMIData = [
 const inputHeight = document.querySelector('.height-input')
 const inputWeight = document.querySelector('.weight-input')
 const btn = document.querySelector('.form-btn')
+const resultDiv = document.querySelector('.bmi-value')
 
 // déclarer un click sur le bouton => console.log('click)
 btn.addEventListener('click', onBtnClick)
@@ -26,4 +27,5 @@ function onBtnClick() {
     const convertedHeight = Number(inputHeight.value)
     const convertedWeight = Number(inputWeight.value)
     console.log(getBmi(convertedHeight, convertedWeight))
+    resultDiv.textContent = getBmi(convertedHeight, convertedWeight)
 }
