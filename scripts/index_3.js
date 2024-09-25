@@ -233,7 +233,7 @@ function getPizzasNames(arr) {
 
 // 2. Ecrire une fonction qui prend en parametre le tableau pizzas et qui retourne le prix moyen des pizzas
 
-console.log(getAveragePrice(pizzas))
+// console.log(getAveragePrice(pizzas))
 function getAveragePrice(arr) {
     let totalPrice = 0;
 
@@ -248,7 +248,7 @@ function getAveragePrice(arr) {
 }
 
 // 3. Ecrire une fonction qui prend en parametre un nom de pizza et qui retourne un tableau des ingredients de cette pizza
-console.log(getPizzaByName("Montagnarde"))
+// console.log(getPizzaByName("Montagnarde"))
 
 // BREAK permet de mettre à fin à une boucle for
 function getPizzaByName(pizzaName) {
@@ -265,5 +265,31 @@ function getPizzaByName(pizzaName) {
 }
 
 // 4. Ecrire une fonction qui prend en parametre un ingredient et un tableau de pizzas, la fonction retourne un tableau des noms des pizzas qui ont cet ingredient
+// la méthode de tableau nécessaire => .includes()
+// console.log(getPizzasByIngredient(pizzas, 'jambon'))
+function getPizzasByIngredient(arr, ingredientName) {
+    let result = []
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].ingredients.includes(ingredientName)) {
+            result.push(arr[i].name)
+        }
+    }
+
+    return result
+}
 
 // 5. Ecrire une fonction qui prend en parametre un tableau de pizzas et qui retourne un tableau de tous les ingredients, en evitant les elements dupliques
+// Dans un premier temps, faire l'exercice avec les éléments dupliqués
+
+console.log(getAllIngredients(pizzas))
+
+function getAllIngredients(arr) {
+    let result = []
+
+    for (let i = 0; i < arr.length; i++) {
+        // une deuxième boucle for imbriquée pour parcourir les ingrédients de chaque pizza
+        result.push(arr[i].ingredients)
+    }
+
+    return result
+}
