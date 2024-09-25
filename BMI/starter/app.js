@@ -26,6 +26,13 @@ function getBmi(h, w) {
 function onBtnClick() {
     const convertedHeight = Number(inputHeight.value)
     const convertedWeight = Number(inputWeight.value)
-    console.log(getBmi(convertedHeight, convertedWeight))
-    resultDiv.textContent = getBmi(convertedHeight, convertedWeight)
+    const bmi = getBmi(convertedHeight, convertedWeight)
+    console.log(bmi)
+    resultDiv.textContent = bmi
+
+    updateLayout(bmi)
+}
+
+function updateLayout(bmiParam) {
+
 }
