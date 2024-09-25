@@ -32,10 +32,10 @@ let hasInterdictionOfDriving = true
 let hasLotOfMoneyToBribePolice = false
 let age = 21
 
+// ! la négation
 if (age >= 18 && !hasInterdictionOfDriving || hasLotOfMoneyToBribePolice) {
     console.log('Tu peux conduire')
 } else {
     console.log(`Tu ne peux pas conduire`)
 }
 
-// ! la négation

@@ -13,6 +13,7 @@ const inputHeight = document.querySelector('.height-input')
 const inputWeight = document.querySelector('.weight-input')
 const btn = document.querySelector('.form-btn')
 const resultDiv = document.querySelector('.bmi-value')
+const descriptionDiv = document.querySelector('.description')
 
 // déclarer un click sur le bouton => console.log('click)
 btn.addEventListener('click', onBtnClick)
@@ -34,5 +35,17 @@ function onBtnClick() {
 }
 
 function updateLayout(bmiParam) {
+    for (let i = 0; i < BMIData.length; i++) {
+        if (bmiParam >= BMIData[i].range[0] && bmiParam < BMIData[i].range[1]) {
+            resultDiv.style.color = BMIData[i].color
+            descriptionDiv.textContent = BMIData[i].name
+            break;
+        }
 
+        // difficulté due à la propriété .range qui n'est pas un tableau sur le dernier objet de BMIdata
+        if (typeof BMIData[i].range == 'number') {
+            resultDiv.style.color = BMIData[i].color
+            descriptionDiv.textContent = BMIData[i].name
+        }
+    }
 }
