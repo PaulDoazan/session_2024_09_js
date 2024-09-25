@@ -1,76 +1,12 @@
-// import movies from './movies.json' assert {type: 'json'}
-
-const movies = [
-    {
-        title: "Fight Club",
-        year: 1999,
-        director: "David Fincher",
-        rate: 8.1,
-        actors: [
-            "Edward Norton",
-            "Brad Pitt",
-            "Helena Bonham Carter"
-        ]
-    },
-    {
-        title: "Interstellar",
-        year: 2014,
-        director: "Christopher Nolan",
-        rate: 7.9,
-        actors: [
-            "Matthew McConaughey",
-            "Anne Hathaway"
-        ]
-    },
-    {
-        title: "Forrest Gump",
-        year: 1994,
-        director: "Robert Zemeckis",
-        rate: 7.9,
-        actors: [
-            "Tom Hanks",
-            "Gary Sinise",
-            "Robin Wright"
-        ]
-    },
-    {
-        title: "Inception",
-        year: 2010,
-        director: "Christopher Nolan",
-        rate: 7.5,
-        actors: [
-            "Leonardo DiCaprio",
-            "Joseph Gordon-Levitt"
-        ]
-    },
-    {
-        title: "Shining",
-        year: 1980,
-        director: "Stanley Kubrick",
-        rate: 8.1,
-        actors: [
-            "Jack Nicholson",
-            "Shelley Duvall",
-            "Danny Lloyd"
-        ]
-    },
-    {
-        title: "Pulp Fiction",
-        year: 1994,
-        director: "Quentin Tarantino",
-        rate: 8.3,
-        actors: [
-            "John Travolta",
-            "Samuel L. Jackson"
-        ]
-    }
-]
+import movies from './movies.json' with {type: 'json'}
 
 // a. Logger le premier element du tableau movies
+console.log(movies[0])
 
-// b. Logger l'annee du 4eme element du tableau movies
+// b. Logger l'annee du 4eme element du tableau movie
+console.log(movies[3])
 
 // c. Logger le titre du dernier element du tableau movies
+console.log(movies[movies.length - 1])
 
 // d. Logger le titre du film qui a la meilleure note
-
